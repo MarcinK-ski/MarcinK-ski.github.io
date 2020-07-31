@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on &gt; Nolife is kind of life &lt;</title>
-    <link>https://blog.kalik.dev/series/</link>
-    <description>Recent content in Series on &gt; Nolife is kind of life &lt;</description>
+    <title>oftop on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/oftop/</link>
+    <description>Recent content in oftop on &gt; Nolife is kind of life &lt;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 28 Jul 2020 14:38:50 +0200</lastBuildDate>
     
-	<atom:link href="https://blog.kalik.dev/series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.kalik.dev/tags/oftop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>general</title>
-      <link>https://blog.kalik.dev/series/general/</link>
+      <title>Why I made this blog?</title>
+      <link>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</link>
       <pubDate>Tue, 28 Jul 2020 14:38:50 +0200</pubDate>
       
-      <guid>https://blog.kalik.dev/series/general/</guid>
+      <guid>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</guid>
       <description></description>
     </item>
     

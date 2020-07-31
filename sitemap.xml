@@ -3,19 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.kalik.dev/blog/</loc>
+    <loc>https://blog.kalik.dev/</loc>
+    <lastmod>2020-07-28T14:39:11+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.kalik.dev/</loc>
+    <loc>https://blog.kalik.dev/about/</loc>
+    <lastmod>2020-07-28T14:39:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/series/general/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/offtop/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/posts/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/reflections/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.kalik.dev/series/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.kalik.dev/tags/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</loc>
+    <lastmod>2020-07-28T14:38:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/blog/</loc>
   </url>
   
 </urlset>

@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&gt; Nolife is kind of life &lt;</title>
-    <link>https://blog.kalik.dev/</link>
-    <description>Recent content on &gt; Nolife is kind of life &lt;</description>
+    <title>offtop on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/offtop/</link>
+    <description>Recent content in offtop on &gt; Nolife is kind of life &lt;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 28 Jul 2020 14:39:11 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 14:38:50 +0200</lastBuildDate>
     
-	<atom:link href="https://blog.kalik.dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.kalik.dev/tags/offtop/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About me</title>
-      <link>https://blog.kalik.dev/about/</link>
-      <pubDate>Tue, 28 Jul 2020 14:39:11 +0200</pubDate>
-      
-      <guid>https://blog.kalik.dev/about/</guid>
-      <description>Hi!
-I&amp;rsquo;m Marcin. Hmmm&amp;hellip; 🤔 What could I say about myself? Maybe I&amp;rsquo;ll list everything 😄
- Games ❤  Board Games 🎲 Card Games 🃏 Video Games 🕹 I&amp;rsquo;m not too old for beeing gamer. I have less time than few years, but IMO 🎮🎮 are not only for kids 😉   This point would looks like complicated be complicated:  Short version: Movies 🎬 Longest version: Old📼/new, razzies/{B,C,D,&amp;hellip;,Z}-Class/(just great and funny in all their weakness) movies 🎥 (ofc.</description>
-    </item>
     
     <item>
       <title>Why I made this blog?</title>
