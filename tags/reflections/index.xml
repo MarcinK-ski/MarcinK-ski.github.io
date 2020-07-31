@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reflections on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/reflections/</link>
+    <description>Recent content in reflections on &gt; Nolife is kind of life &lt;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 28 Jul 2020 14:38:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://blog.kalik.dev/tags/reflections/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why I made this blog?</title>
+      <link>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</link>
+      <pubDate>Tue, 28 Jul 2020 14:38:50 +0200</pubDate>
+      
+      <guid>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</guid>
+      <description>In the chilhood, I had blog only once and never thought, I&amp;rsquo;ll create any blog again. 😊 About week ago at work, I had to find solution for problem with angular, which I solved half year ago. Digging this same pages led me to fix it.
+After that, I wrote message to my friend TehGM about it to let my flustration out. He sugest me to create blog and document how I solve problems.</description>
+    </item>
+    
+  </channel>
+</rss>
