@@ -6,20 +6,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 28 Jul 2020 14:38:50 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jul 2020 12:38:50 +0000</lastBuildDate>
         <atom:link href="https://blog.kalik.dev/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Why I made this blog?</title>
             <link>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</link>
-            <pubDate>Tue, 28 Jul 2020 14:38:50 +0200</pubDate>
+            <pubDate>Tue, 28 Jul 2020 12:38:50 +0000</pubDate>
             
             <guid>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</guid>
             <description>In the chilhood, I had blog only once and never thought, I&amp;rsquo;ll create any blog again. 😊 About week ago at work, I had to find solution for problem with angular, which I solved half year ago. Digging this same pages led me to fix it.
-After that, I wrote message to my friend TehGM about it to let my flustration out. He sugest me to create blog and document how I solve problems.</description>
+After that, I wrote message to my friend TehGM about it to let my flustration out. He sugested me to create blog and document how I solve problems.</description>
             <content type="html"><![CDATA[<p>In the chilhood, I had blog only once and never thought, I&rsquo;ll create any blog again. 😊
 About week ago at work, I had to find solution for problem with angular, which I solved half year ago. Digging this same pages led me to fix it.</p>
-<p>After that, I wrote message to my friend <a href="https://tehgm.net">TehGM</a> about it to let my flustration out. He sugest me to create blog and document how I solve problems.</p>
+<p>After that, I wrote message to my friend <a href="https://tehgm.net">TehGM</a> about it to let my flustration out. He sugested me to create blog and document how I solve problems.</p>
 <p>Ok. So let&rsquo;s start.</p>
 <ul>
 <li>✅ Choose and download framework for blog - <a href="https://gohugo.io/">Hugo</a></li>
@@ -29,7 +29,7 @@ About week ago at work, I had to find solution for problem with angular, which I
 </ul>
 <p>But then I thought&hellip; This blog could be great oppurtunity to &ldquo;be in touch&rdquo; with english - why I write this? Becouse of two reasons:</p>
 <ol>
-<li>To warn against grammar mistakes 😉</li>
+<li>To warn you against grammar mistakes 😉</li>
 <li>I&rsquo;ll write here not only about my &ldquo;technical problems&rdquo;, but my thoughts and about my hobbies too.</li>
 </ol>
 <p>I hope, you find here something interesting or helpful. Enjoy! 🎉</p>
