@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>offtop on &gt; Nolife is kind of life &lt;</title>
-    <link>https://blog.kalik.dev/tags/offtop/</link>
-    <description>Recent content in offtop on &gt; Nolife is kind of life &lt;</description>
+    <title>festivals on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/festivals/</link>
+    <description>Recent content in festivals on &gt; Nolife is kind of life &lt;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 10 Aug 2020 16:28:01 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.kalik.dev/tags/offtop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.kalik.dev/tags/festivals/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -32,16 +32,6 @@ But there was good news too!!! Organizers prepare to us something new - Audience
       <description>2020 is really weird.
 SARS-CoV-2 🦠 caused, we had to sitting at our homes, with only virtual entertainment. After few months, goverments allows for some events, but with strictly rules 😷.
 Thats why, Woodstock festival in Poland (nowadays known as Pol&amp;rsquo;and&amp;rsquo;Rock) took place in internet this year. Only small group of lucky guys, won a tickets (Woodstock was never ticketed), rest of us, had to watch festival in the Internet. For these three days my home turns into &amp;ldquo;festival stage&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>Why I made this blog?</title>
-      <link>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</link>
-      <pubDate>Tue, 28 Jul 2020 12:38:50 +0000</pubDate>
-      
-      <guid>https://blog.kalik.dev/posts/offtop/general/1-whyblog/</guid>
-      <description>In the chilhood, I had blog only once and never thought, I&amp;rsquo;ll create any blog again. 😊 About week ago at work, I had to find solution for problem with angular, which I solved half year ago. Digging these same pages led me to fix it.
-After that, I wrote message to my friend TehGM about it to let my flustration out. He sugested me to create blog and document how I solve problems.</description>
     </item>
     
   </channel>
