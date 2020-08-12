@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>configuration on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/configuration/</link>
+    <description>Recent content in configuration on &gt; Nolife is kind of life &lt;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 11 Aug 2020 21:01:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.kalik.dev/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Config file in .NET Core 3.0 Console Application</title>
+      <link>https://blog.kalik.dev/posts/develop/2-configindotnetcoreconsole/</link>
+      <pubDate>Tue, 11 Aug 2020 21:01:00 +0000</pubDate>
+      
+      <guid>https://blog.kalik.dev/posts/develop/2-configindotnetcoreconsole/</guid>
+      <description>If you want add configuration file into your Console Application using .NET Core, this tutorial is for you 😉 DISCLAMER ❗
+You can find in the Internet more solutions. Let me know, if there is something wrong with my solution. 😉
+Let&amp;rsquo; start  First, add new NuGet packages in your project:  $ dotnet add package Microsoft.Extensions.Configuration.Binder $ dotnet add package Microsoft.Extensions.Configuration.Json   Add new file to your project.</description>
+    </item>
+    
+  </channel>
+</rss>

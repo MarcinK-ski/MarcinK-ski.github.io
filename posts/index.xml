@@ -6,8 +6,171 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 10 Aug 2020 16:28:01 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 11 Aug 2020 21:01:00 +0000</lastBuildDate>
         <atom:link href="https://blog.kalik.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Config file in .NET Core 3.0 Console Application</title>
+            <link>https://blog.kalik.dev/posts/develop/2-configindotnetcoreconsole/</link>
+            <pubDate>Tue, 11 Aug 2020 21:01:00 +0000</pubDate>
+            
+            <guid>https://blog.kalik.dev/posts/develop/2-configindotnetcoreconsole/</guid>
+            <description>If you want add configuration file into your Console Application using .NET Core, this tutorial is for you 😉 DISCLAMER ❗
+You can find in the Internet more solutions. Let me know, if there is something wrong with my solution. 😉
+Let&amp;rsquo; start  First, add new NuGet packages in your project:  $ dotnet add package Microsoft.Extensions.Configuration.Binder $ dotnet add package Microsoft.Extensions.Configuration.Json   Add new file to your project.</description>
+            <content type="html"><![CDATA[<p><br>
+If you want add configuration file into your Console Application using .NET Core, this tutorial is for you 😉
+<br>
+<br>
+<br>
+<strong>DISCLAMER</strong> ❗<br>
+<em>You can find in the Internet more solutions. Let me know, if there is something wrong with my solution.</em> 😉</p>
+<h2 id="let-start">Let&rsquo; start</h2>
+<ul>
+<li>First, add new NuGet packages in your project:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dotnet add package Microsoft.Extensions.Configuration.Binder 
+$ dotnet add package Microsoft.Extensions.Configuration.Json 
+</code></pre></div><ul>
+<li>
+<p>Add new file to your project. Let&rsquo;s say, it will be <code>appsettings.json</code>.</p>
+</li>
+<li>
+<p>Next step, you can do in two ways:</p>
+<ol>
+<li>
+<p>In VS. (1) Rightclick on your config file (here: <em>appsettings.json</em>), then (2) click on <em>Properties</em>. (3) In properties window, select <em>Copy if newer</em> from list <em>Copy to Output Directory</em>. These steps with numbers, are shown on screenshot below:
+
+    <img src="/img/dev-2-configindotnet.png"  alt="*File not found! Screenshot image: appsettings.json configuration in VS*"  class="center"  style="border-radius: 8px; padding: 50px 0;"  />
+
+</p>
+</li>
+<li>
+<p>In <code>.csproj</code> file. Add below code, as child of <code>&lt;Project&gt;</code>:</p>
+</li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XML" data-lang="XML"><span style="color:#f92672">&lt;ItemGroup&gt;</span>
+  <span style="color:#f92672">&lt;None</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;appsettings.json&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span style="color:#f92672">&lt;/CopyToOutputDirectory&gt;</span>
+  <span style="color:#f92672">&lt;/None&gt;</span>
+<span style="color:#f92672">&lt;/ItemGroup&gt;</span>
+</code></pre></div><ul>
+<li>Create new class:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationSettings</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Nick { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+}
+</code></pre></div><ul>
+<li>Fill JSON with values:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;appsettings&#34;</span>: {
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Marcin&#34;</span>,
+    <span style="color:#f92672">&#34;nick&#34;</span>: <span style="color:#e6db74">&#34;Kalik Dev&#34;</span>
+  }
+}
+</code></pre></div><ul>
+<li>And now write code in Main() or other method. The following snipped reads configuration file, gets section named <em>appsettings</em>, create object based on class <em>ApplicationSettings</em> and then write to console read value:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main()
+{
+  IConfigurationRoot configurationRoot = <span style="color:#66d9ef">new</span> ConfigurationBuilder()
+      .SetBasePath(System.IO.Directory.GetCurrentDirectory())
+      .AddJsonFile(<span style="color:#e6db74">&#34;appsettings.json&#34;</span>)
+      .Build();
+
+  ApplicationSettings appConfig = configurationRoot.GetSection(<span style="color:#e6db74">&#34;appsettings&#34;</span>).Get&lt;ApplicationSettings&gt;();
+
+  Console.WriteLine(<span style="color:#e6db74">$&#34;{appConfig.Name} -&gt; {appConfig.Nick}&#34;</span>);
+}
+</code></pre></div><p><br>
+<br>
+That&rsquo;s all folks! 🐻</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>My essential cheatsheet for Git</title>
+            <link>https://blog.kalik.dev/posts/develop/1-gitcheatsheet/</link>
+            <pubDate>Tue, 11 Aug 2020 19:52:00 +0000</pubDate>
+            
+            <guid>https://blog.kalik.dev/posts/develop/1-gitcheatsheet/</guid>
+            <description>Branches Create To create local branch type:
+$ git checkout -b my-local-branch-name Next command, will create remote branch (and commit changes, if any exists on local branch):
+$ git push origin my-local-branch-name (origin means, &amp;ldquo;your original (remote) repo)
+
+But it will not setup tracking remote branch with your local❗ To do this, you have to use u flag:
+$ git push -u origin my-local-branch-name If you want to create new local branch with tracking existing remote:</description>
+            <content type="html"><![CDATA[<h2 id="branches">Branches</h2>
+<h3 id="create">Create</h3>
+<p>To create local branch type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout -b my-local-branch-name
+</code></pre></div><p>Next command, will create remote branch (and commit changes, if any exists on local branch):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push origin my-local-branch-name
+</code></pre></div><p><em>(<code>origin</code> means, &ldquo;your <strong>original</strong> (remote) repo)</em></p>
+<p><br>
+<br>
+But it will not setup tracking remote branch with your local❗ To do this, you have to use <code>u</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push -u origin my-local-branch-name
+</code></pre></div><p>If you want to create new local branch with tracking existing remote:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout -b &lt;your-new-local-branc&gt; origin/&lt;existing-remote-branch&gt;
+</code></pre></div><h3 id="switch-to-existing-branch">Switch to existing branch</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout &lt;local-or-remote-branch-name&gt;
+</code></pre></div><h3 id="list-branches">List branches</h3>
+<p>To list your local branches and check current branch <em>(marked with: <code>*</code>)</em> type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch
+</code></pre></div><p><code>vv</code> flag is usefull if you want to find out, is local branch tracking remote and whichone. It&rsquo;ll show you last commit hash and message</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -vv
+</code></pre></div><p>You can also list remote branches. Just add <code>r</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -r
+</code></pre></div><p>If you want to list all branches (local and remote), use <code>a</code> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -a
+</code></pre></div><p>If you combine two last flags (<code>a</code> and <code>vv</code>), you&rsquo;ll able to show all the information, i wrote in this &ldquo;<em>sub-paragraph</em>&quot;. So, let&rsquo;s try - type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -avv
+</code></pre></div><h3 id="delete">Delete</h3>
+<p>REMEMBER! You cannot delete branch, if you checked out (you&rsquo;ll get error: <code>error: Cannot delete branch '&lt;your_local_branch&gt;' checked out at '&lt;local_path&gt;'</code>). Change your current branch, and then try again.</p>
+<p>To delete local branch type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -d &lt;your-local-branch-name&gt;
+</code></pre></div><p>If branch contains any not pushed commits, you will get error (<code>error: The branch '&lt;your_local_branch&gt;' is not fully merged.</code>). If you won&rsquo;t push it, you can add <code>f</code> flag</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -df &lt;your-local-branch-name&gt;
+</code></pre></div><p>or instead <code>d</code>, use <code>D</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -D &lt;your-local-branch-name&gt;
+</code></pre></div><p>When you want to delete remote branch, you don&rsquo;t need to delete local branch, which is tracking remote. If you type command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push origin -d &lt;remote-branch-name&gt;
+</code></pre></div><p>Then, if you check your local branches (<code>git branch -vv</code>) and you had local tracked branch, you will see <strong>gone</strong> next to deleted remote branch:</p>
+<pre><code>  master          last_commit_hash [origin/master] Last commit on master
+* &lt;local-branch&gt;  last_commit_hash [origin/&lt;remote-branch&gt;: gone] Last commit on this branch
+</code></pre><p><br>
+If command <code>git branch -a</code> still shows remote branch(es), use command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git fetch origin --prune
+</code></pre></div><h2 id="others">Others</h2>
+<h3 id="if-you-need-use-other-nameemail-for-specific-repo">If you need use other name/email for specific repo:</h3>
+<p>Change dir to your cloned repo location dir</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd location_of_your_git_directory
+</code></pre></div><p>Set your nick/name/surname using command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config user.name <span style="color:#e6db74">&#34;Kalik Dev&#34;</span>
+</code></pre></div><p>Now put your email:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config user.email <span style="color:#e6db74">&#34;my-special-email-address@kalik.dev&#34;</span>
+</code></pre></div><p><br>
+Optionaly, you can use this command <code>git config -l</code> to check, if changes have been applied (if you are Linux user or you using WSL/Git Bash (aka MinGW), you can add <code>| fgrep user.</code>, to filter records):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config -l | fgrep user.
+</code></pre></div><p>Console will show you something like that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user.name<span style="color:#f92672">=</span>Marcin K.
+user.email<span style="color:#f92672">=</span>global-email@kalik.dev
+user.name<span style="color:#f92672">=</span>Kalik Dev
+user.email<span style="color:#f92672">=</span>my-special-email-address@kalik.dev
+</code></pre></div><p>You will see your default and new name and email, but git will use &ldquo;<strong>the last one</strong>&rdquo; records!
+<br>
+<br>
+<strong>PAY ATENTION!</strong><br>
+❗ It&rsquo;s <code>email</code>, not <code>mail</code>. If you add record <code>user.mail</code>, it won&rsquo;t work ❗</p>
+]]></content>
+        </item>
         
         <item>
             <title>Octopus Film Festival 2020</title>
@@ -75,7 +238,7 @@ And now&hellip; Few songs 🎵, which qualify for me to last point of bellow poi
 <p><a href="https://open.spotify.com/track/20UaDopMnqgZn96BeG8QU3?si=Ru-lu14mSHmb7ZR0EKVq4Q">Renata Przemyk - Kochana</a></p>
 </li>
 <li>
-<p><a href="https://open.spotify.com/track/7s9DmicisAgFUGeY0ALu5a?si=IS6LQYyZQ3iGYsB-flPwQQ">Jezus Maria Peszek - Sorry Polsko</a></p>
+<p><a href="https://open.spotify.com/track/7s9DmicisAgFUGeY0ALu5a?si=IS6LQYyZQ3iGYsB-flPwQQ">Maria Peszek - Sorry Polsko</a></p>
 </li>
 </ul>
 ]]></content>

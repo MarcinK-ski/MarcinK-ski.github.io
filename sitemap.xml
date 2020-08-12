@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.kalik.dev/posts/develop/2-configindotnetcoreconsole/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/configuration/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/develop/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/series/develop/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/dotnet/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/posts/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/series/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/</loc>
+    <lastmod>2020-08-11T21:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/cheatsheet/</loc>
+    <lastmod>2020-08-11T19:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/tags/git/</loc>
+    <lastmod>2020-08-11T19:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.kalik.dev/posts/develop/1-gitcheatsheet/</loc>
+    <lastmod>2020-08-11T19:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.kalik.dev/tags/festivals/</loc>
     <lastmod>2020-08-10T16:28:01+00:00</lastmod>
   </url>
@@ -28,22 +83,7 @@
   </url>
   
   <url>
-    <loc>https://blog.kalik.dev/posts/</loc>
-    <lastmod>2020-08-10T16:28:01+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.kalik.dev/tags/reflections/</loc>
-    <lastmod>2020-08-10T16:28:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.kalik.dev/series/</loc>
-    <lastmod>2020-08-10T16:28:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.kalik.dev/tags/</loc>
     <lastmod>2020-08-10T16:28:01+00:00</lastmod>
   </url>
   

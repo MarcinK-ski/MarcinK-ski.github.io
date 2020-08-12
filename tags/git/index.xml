@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on &gt; Nolife is kind of life &lt;</title>
+    <link>https://blog.kalik.dev/tags/git/</link>
+    <description>Recent content in git on &gt; Nolife is kind of life &lt;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 11 Aug 2020 19:52:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.kalik.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My essential cheatsheet for Git</title>
+      <link>https://blog.kalik.dev/posts/develop/1-gitcheatsheet/</link>
+      <pubDate>Tue, 11 Aug 2020 19:52:00 +0000</pubDate>
+      
+      <guid>https://blog.kalik.dev/posts/develop/1-gitcheatsheet/</guid>
+      <description>Branches Create To create local branch type:
+$ git checkout -b my-local-branch-name Next command, will create remote branch (and commit changes, if any exists on local branch):
+$ git push origin my-local-branch-name (origin means, &amp;ldquo;your original (remote) repo)
+
+But it will not setup tracking remote branch with your local❗ To do this, you have to use u flag:
+$ git push -u origin my-local-branch-name If you want to create new local branch with tracking existing remote:</description>
+    </item>
+    
+  </channel>
+</rss>
